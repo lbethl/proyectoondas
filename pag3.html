@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <title>⚙️ Propiedades Fundamentales</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>    
+        /* Dropdown principal */
+        .dropdown {
+            position: relative; /* permite posicionamiento relativo del contenido desplegable */
+            display: inline-block; /* hace que el botón y contenido estén en línea */
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; /* transición suave al expandirse */
+        }
+
+        /* Expandir dropdown al pasar mouse */
+        .dropdown:hover {
+            padding-bottom: 250px; /* espacio para mostrar contenido */
+        }
+
+        /* Botón del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s; /* animación suave al hacer hover */
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Efecto hover botón */
+        .droppp:hover {
+            transform: scale(1.05); /* leve aumento de tamaño */
+        }
+
+        /* Contenido del dropdown */
+        .dropdownContent {
+            display: none; /* oculto por defecto */
+            position: absolute; 
+            background-color: #e6f7f5; 
+            width: auto; 
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center; 
+        }
+
+        /* Mostrar contenido al hacer hover */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilo de los enlaces dentro del dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: white;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s; /* animación al pasar mouse */
+        }
+
+        /* Hover de los enlaces */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white; 
+        }
+
+        /* Estilo general del body */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            color: #333;
+        }
+
+        /* Contenedor principal de la página */
+        .contenedorPrincipal {
+            width: 90%;
+            max-width: auto; /* ancho máximo automático */
+            margin: 30px auto;
+            box-shadow: #000000; /* sombra del contenedor */
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        /* Contenido interno de la página */
+        .contenidopagina {
+            padding: 40px 60px; /* espacio interno */
+            text-align: left;
+            font-family: "Numans", sans-serif;
+            min-height: 400px; /* altura mínima */
+        }
+
+        /* Título principal */
+        .contenidopagina h1 {
+            color: #319795;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 42px;
+            padding: 10px 0;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #4fd1c5; /* línea decorativa */
+        }
+
+        /* Subtítulos secciones */
+        .contenidopagina h2 {
+            color: #319795;
+            padding: 15px 0 10px 0;
+            font-family: "Dancing Script", cursive;
+            margin-top: 50px;
+            font-size: 38px;
+            text-align: left;
+        }
+
+        /* Subsubtítulos */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 30px;
+            padding: 5px 15px;
+            background-color: #e6f7f5; 
+            border-left: 5px solid #319795; /* barra decorativa */
+        }
+
+        /* Párrafos y listas */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.8;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+            margin-left: 20px;
+        }
+
+        /* Tablas del contenido */
+        .contenidopagina table {
+            border-collapse: collapse; /* evita espacios entre celdas */
+            margin: 20px auto;
+            box-shadow: #000000;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Celdas de tabla */
+        .contenidopagina table td {
+            padding: 15px;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        /* Cabecera de la tabla */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5;
+            color: white;
+            font-weight: bold;
+            border: none;
+            text-align: center;
+        }
+
+        /* Efecto hover de fila */
+        .contenidopagina table tr:hover {
+            background-color: #b2f5ea;
+        }
+
+        /* Pie de página de la sección */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            border-radius: 0 0 12px 12px; /* esquinas redondeadas inferiores */
+            margin-top: 30px;
+        }
+
+        /* Secciones generales */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Imágenes dentro de secciones */
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: #000000;
+        }
+
+        /* Enlaces inferiores decorativos */
+        .enlaceInferior {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            font-family: "Josefin Sans", sans-serif;
+            color: #319795;
+            text-decoration: none;
+            border: 2px solid #4fd1c5;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .enlaceInferior:hover {
+            background-color: #e6f7f5; /* cambio de fondo al pasar mouse */
+        }
+
+        /* Anuncio pie */
+        .anuncioPie {
+            background-color: #b2f5ea;
+            color: #319795;
+            padding: 10px;
+            margin-top: 30px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Estilo de fórmulas */
+        .formula {
+            font-family: "Times New Roman", serif;
+            font-size: 19px;
+            display: block;
+            padding: 5px ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    
+    <div class="contenedorPrincipal">
+        <div class="contenidopagina">
+
+            <h1>⚙️ Propiedades Fundamentales de las Ondas Electromagnéticas</h1>
+
+            <div class="section">
+                <h2>Velocidad de la Luz (c)</h2>
+                <p>
+                    Una de las propiedades más cruciales es que todas las ondas electromagnéticas, independientemente de su frecuencia o longitud de onda, viajan a la misma velocidad en el vacío. Esta es la <b>velocidad de la luz</b>, una constante universal:
+                    <br><br>
+                    <i style="color: #4fd1c5; display: block; text-align: center; font-size: 26px; font-family: Times New Roman"><b>c</b> = 3.00  x  10<sup>8</sup> m/s</i>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Relación entre Frecuencia, Longitud de Onda y Energía</h2>
+                <p>
+                    Aunque viajan a la misma velocidad, las ondas electromagnéticas difieren en su <b>frecuencia</b> (<i>f</i>), <b>longitud de onda</b> (<i>&lambda;</i>) y, consecuentemente, en la <b>energía</b> (<i>E</i>) que transportan. Estas magnitudes están intrínsecamente ligadas por las siguientes ecuaciones:
+                </p>
+                <table  cellpadding="8">
+                    <tr class="cabeceraprincipal">
+                        <td><b>Magnitud</b></td>
+                        <td><b>Símbolo</b></td>
+                        <td><b>Fórmula de Relación</b></td>
+                    </tr>
+                    <tr>
+                        <td>Velocidad, Longitud de Onda y Frecuencia</td>
+                        <td><b>c</b> / <b>&lambda;</b> / <b>f</b></td>
+                        <td><i class="formula"><b>c</b> = <b>&lambda;</b> x <b>f</b></i></td>
+                    </tr>
+                    <tr>
+                        <td>Energía y Frecuencia (Fórmula de Planck)</td>
+                        <td><b>E</b> / <b>f</b></td>
+                        <td><i class="formula"><b>E</b> = <b>h</b> x <b>f</b></i></td>
+                    </tr>
+                    <tr>
+                        <td>Constante de Planck</td>
+                        <td><b>h</b></td>
+                        <td><i class="formula" style="font-size: 20px;"><b>h</b> &asymp; 6.626 &times; 10<sup>-34</sup> J&times;s</i></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>Comportamiento Ondulatorio Clásico</h2>
+                <p>
+                    Las ondas electromagnéticas exhiben comportamientos clásicos que demuestran su naturaleza ondulatoria. Estos fenómenos son fundamentales para su aplicación en telecomunicaciones y óptica:
+                </p>
+                <ul>
+                    <li><b>Reflexión:</b> Es el rebote de una onda al encontrarse con una superficie. Este principio permite que veamos objetos y es la base de los espejos y radares.</li>
+                    <li><b>Refracción:</b> Es el cambio en la dirección y la velocidad de una onda cuando pasa de un medio a otro (por ejemplo, del aire al agua), lo que permite el funcionamiento de lentes y prismas.</li>
+                    <li><b>Difracción:</b> Es la capacidad de la onda para curvarse alrededor de los bordes de un obstáculo o pasar a través de pequeñas aberturas.</li>
+                    <li><b>Polarización:</b> Es la restricción de la vibración del campo eléctrico de la onda a un solo plano, algo que se utiliza en lentes polarizadas y antenas de radio.</li>
+                </ul>
+                <img src="propiedades.jpg" alt="Ejemplo de reflexión, refracción y difracción de ondas" style="width: 50%;">
+            </div>
+        </div>
+        <marquee class="anuncioPie" behavior="alternate">
+            ¡Las propiedades fundamentales explican cómo entendemos la luz y el universo!
+        </marquee>
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>

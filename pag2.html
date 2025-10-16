@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Espectro Electromagnético</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Josefin+Sans|Petit+Formal+Script|Roboto|Numans">
+    
+    <style>
+        /* dropdown principal */
+        .dropdown {
+            position: relative; /* permite posicionamiento relativo para mostrar dropdown */
+            display: inline-block; /* permite que el dropdown sea inline y block a la vez */
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; /* efecto suave al expandir */
+        }
+
+        /* hover del dropdown */
+        .dropdown:hover {
+            padding-bottom: 250px; /* permite espacio para mostrar contenido */
+        }
+
+        /* botón del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s; /* animación al hacer hover */
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* efecto hover botón */
+        .droppp:hover {
+            transform: scale(1.05); /* leve aumento de tamaño */
+        }
+
+        /* contenido del dropdown */
+        .dropdownContent {
+            display: none; /* oculto por defecto */
+            position: absolute; 
+            background-color: #e6f7f5; 
+            width: auto; 
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center; 
+        }
+
+        /* mostrar contenido al hacer hover */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* estilo de los enlaces dentro del dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: white;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+
+        /* hover de los enlaces */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white; 
+        }
+
+        /* estilo general body */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            color: #319795;
+        }
+
+        /* contenedor principal */
+        .contenedor {
+            width: auto;
+            height: auto;
+            margin: 40px;
+            box-shadow: 0 4px 8px #000000;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        /* encabezado */
+        .encabezamiento {
+            background-color: #4fd1c5;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid #319795;
+        }
+
+        .encabezamiento h1 {
+            font-size: 38px;
+            font-family: "Dancing Script", cursive; /* fuente del título */
+            font-weight: normal;
+        }
+
+        /* contenido */
+        .contenido {
+            padding: 40px;
+        }
+
+        /* subtítulos */
+        h2 {
+            color: #319795;
+            border-bottom: 2px solid #4fd1c5;
+            padding-bottom: 10px;
+            font-family: "Dancing Script", cursive;
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* párrafos */
+        p {
+            text-align: justify;
+            line-height: 1.6;
+            font-family: "Roboto", sans-serif;
+            color: #349D8B;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        /* imágenes */
+        img {
+            border: 6px solid #b2f5ea;
+            border-radius: 8px;
+            background-color: #ffffff;
+            display: block;
+            margin: 30px auto;
+            box-shadow: #000000;
+            width: 280px;
+            height: auto;
+        }
+
+        /* tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        th {
+            padding: 25px;
+            vertical-align: top;
+            border: 2px solid #b2f5ea;
+            background-color: #ffffff;
+            border-radius: 8px;
+            font-weight: normal;
+        }
+
+        /* pie de contenido */
+        .pieContenido {
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid #4fd1c5;
+            font-family: "Roboto", sans-serif;
+            background-color: #07A696;
+            color: white;
+            font-size: 18px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+
+    <div class="contenedorPrincipal">
+        <div class="contenidopagina">
+            <div class="contenedor">
+                <div class="encabezamiento">
+                    <h1><b>El Espectro Electromagnético</b></h1>
+                </div>
+                <div class="contenido">
+                    <table>
+                        <tr>
+                            <th>
+                                <h2>¿Qué es?</h2>
+                                <p>El espectro electromagnético es el conjunto de todas las radiaciones electromagnéticas ordenadas según su frecuencia o longitud de onda. Incluye desde las ondas de radio, con la longitud de onda más larga y menor energía, hasta los rayos gamma, con longitudes muy cortas y alta energía. Estas radiaciones comparten la misma naturaleza, pero se diferencian por la cantidad de energía que transportan y por los usos que tienen en la ciencia, la tecnología, la medicina y las telecomunicaciones.</p>
+                            </th>
+                            <th>
+                                <img src="no.gif" alt="Espectro electromagnético">
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h2>Cómo funciona</h2>
+                                <p>Las ondas electromagnéticas se generan por la aceleración de cargas eléctricas, como electrones en átomos o antenas. Su comportamiento se describe por tres parámetros clave interrelacionados:</p>
+                                <p><b>Longitud de onda (λ)</b>: es la distancia entre dos puntos iguales consecutivos de una onda, como entre dos crestas o dos valles. Se mide generalmente en metros (m), aunque dependiendo del tipo de onda puede expresarse en centímetros o nanómetros.</p>
+                                <p><b>Frecuencia (f)</b>: es el número de veces que una onda se repite en un segundo. Indica cuántos ciclos ocurren cada segundo.</p>
+                                <p><b>Energía del fotón (E)</b>: cada onda se puede considerar como un flujo de partículas llamadas fotones, cuya energía es E = h × f, donde h es la constante de Planck (6.626 × 10⁻³⁴ J·s).</p>
+                            </th>
+                            <th>
+                                <img src="onda.gif" alt="Onda electromagnética">
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h2>Características clave</h2>
+                                <p><b>Energía</b>: la energía de una onda es proporcional a su frecuencia (E = hf, donde h es la constante de Planck). Por eso, los rayos gamma son ionizantes y potencialmente dañinos, mientras que las ondas de radio son seguras.</p>
+                                <p><b>Importancia</b>: el espectro es fundamental en física, astronomía, medicina y tecnología. Por ejemplo, los telescopios como el Hubble observan en luz visible e infrarrojo, mientras que el Chandra lo hace en rayos X.</p>
+                            </th>
+                            <th>
+                                <img src="color.gif" alt="Dispersión de la luz a través de un prisma">
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="pieContenido">
+                    Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

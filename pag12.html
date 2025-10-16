@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <title>🔮 Aplicaciones Innovadoras y Futuro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto|Numans|Trirong">
+    <style>
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            transition: padding-bottom 0.5s;
+        }
+        
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px;
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: #ffffff;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: #e6f7f5;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            padding: 8px 14px;
+            vertical-align: top;
+            margin: 8px;
+            background-color: #4fd1c5;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            margin: 0;
+            padding: 0;
+            color: #333333;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor-principal {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px #000000;
+            padding: 30px;
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            font-family: "Numans", sans-serif;
+            text-align: left;
+        }
+
+        /* Estilos generales para tablas */
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px auto;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow:#000000;
+        }
+
+        /* Estilos para td dentro de tablas */
+        td {
+            padding: 15px;
+            vertical-align: top;
+            border-bottom: 1px solid #e0f2f1;
+        }
+
+        /* Estilos para td en la cabecera principal de tablas */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        /* Estilos para td en la cabecera clara de tablas */
+        .cabeceraclara td {
+            background-color: #b2f5ea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Estilos generales para imágenes */
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 35%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px #000000;
+        }
+
+        /* Estilos para enlaces */
+        a {
+            color: #319795;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Estilos para el pie de contenido */
+        .pieContenido {
+            background-color: #319795;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 0px 0px 12px 12px;
+        }
+
+        /* Estilos para elementos marquee */
+        marquee {
+            background-color: #b2f5ea;
+            color: #1a202c;
+            padding: 8px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la fila de conclusión en tablas */
+        .conclusion-row td {
+            background-color: #e6f7f5;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #4fd1c5;
+        }
+        
+        /* Estilos para el título de conclusión */
+        .conclusion-title {
+            font-size: 20px;
+            color: #319795;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        /* Estilos para el texto de conclusión */
+        .conclusion-text {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="contenidopagina">
+            <table>
+                <tr class="cabeceraprincipal">
+                    <td colspan="2">Aplicaciones Innovadoras y Futuro</td>
+                </tr>
+                <tr class="cabeceraclara">
+                    <td>Tecnologías Emergentes</td>
+                    <td>Retos y Desafíos</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><b>5G:</b> redes móviles más rápidas y con mayor capacidad de conexión.</li><br>
+                            <li><b>Comunicaciones cuánticas:</b> transmisión ultra segura de información.</li><br>
+                            <li><b>Imágenes médicas avanzadas:</b> diagnóstico más preciso con resonancias y rayos X mejorados.</li><br>
+                            <li><b>Internet de las cosas (IoT):</b> hogares y ciudades inteligentes conectados.</li><br>
+                            <li><b>Realidad aumentada y virtual:</b> aplicaciones educativas, médicas y de entretenimiento.</li><br>
+                            <li><b>Inteligencia Artificial:</b> análisis de datos masivos y automatización de procesos.</li><br>
+                            <li><b>Robótica avanzada:</b> cirugía asistida y exploración de entornos peligrosos.</li><br>
+                            <li><b>Energías renovables inteligentes:</b> optimización de paneles solares y redes eléctricas.</li><br>
+                            <li><b>Telemedicina:</b> atención médica remota y monitoreo en tiempo real.</li><br>
+                            <li><b>Vehículos autónomos:</b> transporte seguro y eficiente mediante sensores y comunicación EM.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <table width="100%" cellpadding="6">
+                            <tr class="cabeceraclara">
+                                <td>Reto</td>
+                                <td>Descripción</td>
+                            </tr>
+                            <tr>
+                                <td>Contaminación electromagnética</td>
+                                <td>Exceso de radiación en entornos urbanos que afecta a la salud y al medio ambiente.</td>
+                            </tr>
+                            <tr>
+                                <td>Sostenibilidad</td>
+                                <td>Uso responsable de tecnologías que consumen energía y generan residuos electrónicos.</td>
+                            </tr>
+                            <tr>
+                                <td>Seguridad y privacidad</td>
+                                <td>Protección de datos personales frente a ciberataques y vulnerabilidades.</td>
+                            </tr>
+                            <tr>
+                                <td>Acceso desigual</td>
+                                <td>Brecha digital que limita la disponibilidad de tecnologías a ciertas poblaciones.</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr class="conclusion-row">
+                    <td colspan="2">
+                        <div class="conclusion-title">
+                            Conclusión: La Esencia de las Ondas Electromagnéticas
+                        </div>
+                        <div class="conclusion-text">
+                            Las ondas electromagnéticas son la <b>columna vertebral</b> de la tecnología moderna y una <b>fuerza fundamental</b> del universo. Desde las ondas de radio que permiten la comunicación inalámbrica y el funcionamiento del GPS, hasta los rayos X y gamma utilizados en la medicina y la investigación, cubren todo el espectro que nos conecta, nos ilumina y nos permite ver el cosmos.<br><br> Su estudio no solo ha transformado la sociedad con innovaciones como el 5G y la telemedicina, sino que también nos plantea importantes <b>desafíos</b> éticos y ambientales, como la gestión de la contaminación electromagnética y la sostenibilidad energética. <br><br>Comprender su naturaleza y potencial es clave para construir un futuro conectado, seguro y tecnológicamente avanzado.
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+<br><br>
+            <img src="futuro.jpg">
+<br><br>
+            <marquee behavior="alternate">
+                ¡El futuro de las ondas electromagnéticas está lleno de innovación y desafíos!
+            </marquee>
+        </div>
+
+        <div class="pieContenido">
+            2025 - Proyecto Web Ondas Electromagnéticas
+        </div>
+    </div>
+</body>
+</html>

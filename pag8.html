@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+  <title>Ultravioleta (UV): Beneficios y riesgos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Josefin+Sans|Roboto|Numans|Quicksand">
+  <style>
+    /* Estilos para el contenedor del dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+      width: 100%;
+      text-align: center;
+      transition: padding-bottom 0.5s;
+    }
+
+    /* Estilos para el dropdown al pasar el mouse */
+    .dropdown:hover {
+      padding-bottom: 250px;
+    }
+
+    /* Estilos para el enlace principal del dropdown */
+    .droppp {
+      background-color: #4fd1c5;
+      color: white;
+      padding: 14px 24px;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: transform 0.3s;
+      font-family: "Roboto", sans-serif;
+    }
+
+    /* Estilos para el enlace principal del dropdown al pasar el mouse */
+    .droppp:hover {
+      transform: scale(1.05);
+    }
+
+    /* Estilos para el contenido del dropdown */
+    .dropdownContent {
+      display: none;
+      position: absolute;
+      background-color: #e6f7f5;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 4px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+    .dropdown:hover .dropdownContent {
+      display: block;
+    }
+
+    /* Estilos para los enlaces de temas en el dropdown */
+    .temaDropdown {
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      padding: 8px 14px;
+      vertical-align: top;
+      margin: 8px;
+      background-color: #4fd1c5;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      transition: transform 0.5s;
+    }
+
+    /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+    .temaDropdown:hover {
+      background-color: #3aa89b;
+      transform: scale(1.1);
+      color: white;
+    }
+
+    /* Estilos para html y body */
+    html, body {
+      height: 100%;
+      background-color: #e6f7f5;
+      font-family: "Quicksand", sans-serif;
+      color: #0a3a3a;
+      font-size: 21px;
+      line-height: 1.7;
+    }
+
+    /* Estilos para el contenedor principal */
+    .contenedor-principal {
+      min-height: 100%;
+      background-color: white;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 40px 40px 40px;
+      border-radius: 18px;
+    }
+
+    /* Estilos para el encabezado */
+    header {
+      background-color: #4fd1c5;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      border-radius: 18px 18px 0px 0px;
+      border-bottom: 4px solid #319795;
+    }
+
+    /* Estilos para h1 dentro de header */
+    header h1 {
+      font-family: "Numans", sans-serif;
+      font-size: 40px;
+      letter-spacing: 1px;
+    }
+
+    /* Estilos para p dentro de header */
+    header p {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    /* Estilos para las secciones */
+    .seccion {
+      border: 2px solid #b2f5ea;
+      border-radius: 18px;
+      padding: 35px;
+      margin: 35px 0;
+      transition: transform 0.3s;
+    }
+
+    /* Estilos para las secciones al pasar el mouse */
+    .seccion:hover {
+      transform: scale(1.01);
+      border-color: #4fd1c5;
+    }
+
+    /* Estilos para h2 dentro de .seccion */
+    .seccion h2 {
+      font-family: "Numans", sans-serif;
+      color: #319795;
+      border-left: 6px solid #4fd1c5;
+      padding-left: 10px;
+      font-size: 28px;
+    }
+
+    /* Estilos para p dentro de .seccion */
+    .seccion p {
+      text-align: justify;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Estilos para ul dentro de .seccion */
+    .seccion ul {
+      padding-left: 25px;
+    }
+
+    /* Estilos para li dentro de .seccion */
+    .seccion li {
+      margin-bottom: 10px;
+    }
+
+    /* Estilos para contenedores de imágenes */
+    .imagen {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Estilos para imágenes dentro de .imagen */
+    .imagen img {
+      width: 85%;
+      max-width: 450px;
+      border-radius: 15px;
+      border: 3px solid #b2f5ea;
+      transition: transform 0.3s;
+    }
+
+    /* Estilos para imágenes dentro de .imagen al pasar el mouse */
+    .imagen img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Estilos generales para tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #f0f9f8;
+      margin-top: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Estilos para th y td */
+    th, td {
+      border: 1px solid #b2f5ea;
+      padding: 12px;
+      text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+    }
+
+    /* Estilos específicos para th */
+    th {
+      background-color: #4fd1c5;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Estilos para el mensaje de sol */
+    .mensaje-sol {
+      background-color: #4fd1c5;
+      color: white;
+      font-family: "Numans", sans-serif;
+      font-size: 21px;
+      border-radius: 10px;
+      text-align: center;
+      padding: 12px;
+      margin: 25px 0px;
+    }
+
+    /* Estilos para el footer */
+    .footer {
+      background-color: #319795;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      border-top: 4px solid #4fd1c5;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 18px;
+      border-radius: 0 0 18px 18px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dropdown">
+    <a href="#" class="droppp">Ver temas principales...</a>
+    <div class="dropdownContent">
+      <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+      <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+      <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+      <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+      <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+      <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+      <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+      <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+      <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+      <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+      <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+      <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+      <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+    </div>
+  </div>
+
+  <div class="contenedor-principal">
+    <header>
+      <h1>Ultravioleta (UV)</h1>
+      <p>Beneficios y riesgos — la energía invisible del Sol</p>
+    </header>
+
+    <div class="seccion">
+      <h2>¿Qué es la radiación ultravioleta?</h2>
+      <p>
+        La <b>radiación ultravioleta (UV)</b> es parte del espectro electromagnético, con longitudes de onda más cortas que la luz visible.
+        Se divide en <b>UVA, UVB y UVC</b>, siendo las dos primeras las que alcanzan la superficie terrestre.
+        Aunque invisible para el ojo humano, tiene efectos importantes sobre los seres vivos.
+      </p>
+      <div class="imagen">
+        <img src="ultravioleta_1.jpg">
+      </div>
+    </div>
+
+    <div class="seccion">
+      <h2>Beneficios</h2>
+      <ul>
+        <li>Estimula la producción de <b>vitamina D</b> en la piel.</li>
+        <li>Permite la <b>esterilización</b> de ambientes y objetos con luz UVC.</li>
+        <li>Ayuda en tratamientos médicos bajo control profesional.</li>
+      </ul>
+      <div class="imagen">
+        <img src="uv_beneficios.jpg">
+      </div>
+    </div>
+
+    <div class="seccion">
+      <h2>Riesgos</h2>
+      <p>
+        La exposición prolongada sin protección puede causar <b>quemaduras</b>, <b>fotoenvejecimiento</b> y <b>cáncer de piel</b>.
+        También puede afectar los ojos (cataratas) y contribuir al deterioro de la capa de ozono.
+      </p>
+      <table>
+        <tr><th>Tipo</th><th>Longitud de onda</th><th>Efectos</th></tr>
+        <tr><td>UVA</td><td>315–400 nm</td><td>Envejecimiento cutáneo</td></tr>
+        <tr><td>UVB</td><td>280–315 nm</td><td>Vitamina D y quemaduras solares</td></tr>
+        <tr><td>UVC</td><td>100–280 nm</td><td>Germicida (bloqueado por la atmósfera)</td></tr>
+      </table>
+      <div class="imagen">
+        <img src="uv_peligros.jpg">
+      </div>
+    </div>
+
+    <div class="seccion">
+      <h2>Protección</h2>
+      <p>Para evitar daños, se recomienda:</p>
+      <ul>
+        <li>Usar <b>protector solar</b> de amplio espectro.</li>
+        <li>Evitar el sol directo entre las 10 a.m. y 4 p.m.</li>
+        <li>Usar <b>gafas con filtro UV</b>, ropa protectora y sombrero.</li>
+      </ul>
+      <div class="imagen">
+        <img src="proteccion_uv.jpg">
+      </div>
+    </div>
+
+    <div class="mensaje-sol">
+      ☀ Cuidar la piel es proteger tu salud. ¡Usa protector solar todos los días! ☀
+    </div>
+
+    <div class="footer">
+      Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <title>⚛️ Interacción con la Materia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5; 
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor-principal {
+            width: 90%;
+            max-width: auto;
+            margin: 20px auto;
+            box-shadow:#000000;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+            min-height: 400px;
+        }
+
+        /* Estilos para h1 dentro de .contenidopagina */
+        .contenidopagina h1 {
+            color: #319795;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        /* Estilos para h2 dentro de .contenidopagina */
+        .contenidopagina h2 {
+            color: #319795;
+            font-family: "Dancing Script", cursive;
+            font-size: 32px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para h3 dentro de .contenidopagina */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 25px;
+        }
+        
+        /* Estilos para p y li dentro de .contenidopagina */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* Estilos generales para tablas */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            width: 100%;
+            font-family: "Roboto", sans-serif;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Estilos para td dentro de tablas */
+        table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        
+        /* Estilos para td en la cabecera clara de tablas */
+        .cabeceraclara td { 
+            background-color: #b2f5ea; 
+            color: #333; 
+            font-weight: bold;
+        }
+
+        /* Estilos para td en la cabecera principal de tablas */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5; 
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; 
+        }
+        
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+            box-shadow: #000000;
+        }
+        
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+            background-color: #3aa89b;
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%; 
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: white;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white; 
+        }
+
+        /* Estilos para el pie de contenido */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos generales para imágenes */
+        img {
+            display: block;
+            margin: 15px auto;
+            width: 30%;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <div class="dropdown">
+            <a href="#" class="droppp">Ver temas principales...</a>
+            <div class="dropdownContent">
+                <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+                <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+                <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+                <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+                <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+                <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+                <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+                <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+                <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+                <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+                <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+                <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+                <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+            </div>
+        </div>
+
+        <div class="contenidopagina">
+            <h1>⚛️ Interacción de las Ondas Electromagnéticas con la Materia</h1>
+
+            <h2>1. Principales tipos de interacción</h2>
+            <p>Las ondas electromagnéticas pueden <b>interactuar con la materia</b> de distintas maneras: ser absorbidas, transmitidas o dispersadas.</p>
+
+            <h3>Absorción</h3>
+            <p>La energía de la onda se convierte en calor o provoca ionización, como ocurre con los rayos X y gamma.</p>
+
+            <h3>Transmisión</h3>
+            <p>La onda atraviesa el material, modificando su velocidad según la densidad y propiedades del medio.</p>
+
+            <h3>Dispersión</h3>
+            <p>La onda se desvía en distintas direcciones, como la luz azul en la atmósfera que produce el cielo azul.</p>
+            <br><br>
+            <img src="interaccion.jpg">
+
+            <h2>2. Ejemplos prácticos</h2>
+            <table>
+                <tr class="cabeceraprincipal">
+                    <td>Ejemplo</td>
+                    <td>Descripción</td>
+                </tr>
+                <tr class="cabeceraclara">
+                    <td>Hornos microondas</td>
+                    <td>Absorción de microondas calienta los alimentos.</td>
+                </tr>
+                <tr>
+                    <td>Radiación ultravioleta</td>
+                    <td>Ioniza la materia, causando cambios químicos en la piel.</td>
+                </tr>
+                <tr class="cabeceraclara">
+                    <td>Dispersión de la luz</td>
+                    <td>Produce fenómenos atmosféricos como el cielo azul.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>

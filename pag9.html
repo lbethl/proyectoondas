@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <title>🩻 Rayos X</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Josefin+Sans|Petit+Formal+Script|Roboto|Numans|Trirong">
+    <style>    
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; 
+        }
+        
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: #ffffff;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute; 
+            background-color: #e6f7f5;
+            width: auto; 
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center; 
+        }
+        
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: #ffffff;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: #ffffff; 
+        }
+
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            color: #333333;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedorPrincipal {
+            width: 90%;
+            max-width: 1190px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+        }
+
+        /* Estilos para h1 dentro de .contenidopagina */
+        .contenidopagina h1 {
+            color: #319795;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 42px;
+            padding: 10px 0px;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #4fd1c5;
+        }
+
+        /* Estilos para h2 dentro de .contenidopagina */
+        .contenidopagina h2 {
+            color: #319795;
+            padding: 15px 0px 10px 0px;
+            font-family: "Dancing Script", cursive;
+            margin-top: 50px;
+            font-size: 38px;
+            text-align: left;
+        }
+
+        /* Estilos para h3 dentro de .contenidopagina */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 30px;
+            padding: 5px 15px;
+            background-color: #e6f7f5;
+            border-left: 5px solid #319795;
+        }
+        
+        /* Estilos para p y li dentro de .contenidopagina */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.8;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+            margin-left: 20px;
+        }
+        
+        /* Estilos para tablas dentro de .contenidopagina */
+        .contenidopagina table {
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: "Roboto", sans-serif;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Estilos para td dentro de tablas en .contenidopagina */
+        .contenidopagina table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        /* Estilos para td en la cabecera principal de tablas */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+        }
+
+        /* Estilos para filas de tablas en .contenidopagina al pasar el mouse */
+        .contenidopagina table tr:hover {
+            background-color: #b2f5ea;
+        }
+
+        /* Estilos para contenedores de imágenes */
+        .imagenContainer {
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        /* Estilos para imágenes dentro de .imagenContainer */
+        .imagenContainer img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos para datos curiosos */
+        .datoCurioso {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f9f8;
+            border: 2px solid #4fd1c5;
+            border-radius: 10px;
+            font-family: "Josefin Sans", sans-serif;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        /* Estilos para enlaces de tipo linkTubo */
+        .linkTubo {
+            display: block;
+            background-color: #b2f5ea;
+            color: #319795;
+            padding: 10px 15px;
+            margin: 10px auto;
+            max-width: 90%;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos para enlaces de tipo linkTubo al pasar el mouse */
+        .linkTubo:hover {
+            background-color: #4fd1c5;
+            color: #ffffff;
+        }
+
+        /* Estilos específicos para imágenes con clase rayos3 */
+        img.rayos3 {
+            border-radius: 50px;
+            width: 200px;
+            height: 350px;
+        }
+
+        /* Estilos para el pie de contenido */
+        .pieContenido {
+            background-color: #319795;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            border-radius: 0px 0px 12px 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <br>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    
+    <div class="contenedorPrincipal">
+        <div class="contenidopagina">
+            
+            <h1>🩻 Rayos X: La Visión Interna de la Materia</h1>
+            
+            <p>Los <b>Rayos X</b> son una forma de radiación electromagnética con longitudes de onda extremadamente cortas y, por lo tanto, una energía muy alta. Se sitúan entre la radiación ultravioleta y los rayos gamma en el espectro electromagnético. Su alta energía les permite penetrar la materia opaca, lo que los hace indispensables en campos como la medicina y la industria.</p>
+
+            <h2>1. Naturaleza y Generación de los Rayos X</h2>
+            <p>Los Rayos X se caracterizan por ser radiación ionizante, lo que significa que tienen suficiente energía para arrancar electrones de los átomos, un proceso que puede ser biológicamente dañino pero tecnológicamente útil.</p>
+
+            <h3>¿Cómo se Producen?</h3>
+            <ul>
+                <li>Frenado (Bremsstrahlung): Se producen cuando un haz de electrones de alta velocidad es frenado por un objetivo metálico (ánodo) en un tubo de vacío, liberando energía en forma de fotones de Rayos X.</li>
+                <li>Rayos X Característicos: Ocurren cuando un electrón golpea y expulsa otro de las capas internas del átomo objetivo. Al caer un electrón de una capa superior, libera un fotón con energía característica del material.</li>
+            </ul>
+            
+            <div class="imagenContainer">
+                <img src="rayos2.png"><br><br>
+                <a href="https://www.famaf.unc.edu.ar/~pperez1/manuales/cdr/tubos-de-rayos-x.html" class="linkTubo">Click para ver más... (Diagrama del Tubo de Rayos X)</a>
+                <br><br>
+                <img src="rayos.png">
+            </div>
+
+            <h2>2. Aplicaciones Esenciales en la Sociedad</h2>
+            <p>La capacidad de los Rayos X para penetrar diferentes densidades de material a distintas velocidades es la clave de su utilidad.</p>
+
+            <table border="1px" >
+                <tr class="cabeceraprincipal">
+                    <td><b>Campo</b></td>
+                    <td><b>Uso Principal</b></td>
+                    <td><b>Principio Físico Clave</b></td>
+                </tr>
+                <tr>
+                    <td><b>Medicina (Radiología)</b></td>
+                    <td>Diagnóstico de fracturas óseas y detección de patologías pulmonares o dentales.</td>
+                    <td>La absorción diferencial: el calcio de los huesos absorbe más Rayos X que los tejidos blandos.</td>
+                </tr>
+                <tr>
+                    <td><b>Tomografía Computarizada (TC)</b></td>
+                    <td>Obtención de imágenes transversales detalladas del cuerpo para un diagnóstico más preciso.</td>
+                    <td>Múltiples proyecciones de Rayos X combinadas por computadora para crear una imagen 3D.</td>
+                </tr>
+                <tr>
+                    <td><b>Seguridad</b></td>
+                    <td>Escaneo de equipaje en aeropuertos y control de calidad en productos manufacturados.</td>
+                    <td>Capacidad de penetrar materiales para identificar objetos o estructuras internas sin abrirlos.</td>
+                </tr>
+                <tr>
+                    <td><b>Cristalografía</b></td>
+                    <td>Determinación de la estructura atómica y molecular de cristales (ADN, proteínas, minerales).</td>
+                    <td>Difracción: el patrón que forman los Rayos X al chocar contra la estructura regular de un cristal.</td>
+                </tr>
+            </table>
+
+            <div class="datoCurioso">
+                💡 <b>Dato Curioso:</b> Los Rayos X fueron descubiertos accidentalmente por el físico alemán <b>Wilhelm Conrad Röntgen</b> en 1895. Inicialmente los llamó <b>"Rayos Incógnita"</b> (X), ya que desconocía su naturaleza. Su primera radiografía famosa fue la mano de su esposa, mostrando claramente sus huesos y su anillo de bodas. 💍
+            </div>
+
+            <br><br>
+            <center>
+                <img class="rayos3" src="rayos3.jpg">           
+            </center>
+
+        </div>
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>

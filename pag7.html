@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>👁️ Luz Visible y Percepción Humana</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            transition: padding-bottom 0.5s;
+        }
+
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px;
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: #e6f7f5;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            padding: 8px 14px;
+            vertical-align: top;
+            margin: 8px;
+            background-color: #4fd1c5;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+        
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            background-color: #e6f7f5;
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Estilos para los encabezados h1 */
+        h1 {
+            background-color: #4fd1c5;
+            color: white;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 40px;
+            margin: 0;
+            padding: 20px;
+            border-bottom: 4px solid #319795;
+            letter-spacing: 1px;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedor {
+            width: 90%;
+            max-width: auto;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: #000000;
+            padding: 20px;
+        }
+
+        /* Estilos para las secciones */
+        .seccion {
+            width: auto;
+            height: auto;
+            background-color: #f0f9f8;
+            border: 2px solid #b2f5ea;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: #000000;
+            transition: transform 0.3s;
+        }
+
+        /* Estilos para las secciones al pasar el mouse */
+        .seccion:hover {
+            transform: scale(1.01);
+            border-color: #4fd1c5;
+        }
+
+        /* Estilos para el texto dentro de secciones */
+        .texto {
+            padding: 15px;
+        }
+
+        /* Estilos para h2 dentro de .texto */
+        .texto h2 {
+            font-family: "Dancing Script", cursive;
+            color: #319795;
+            font-size: 32px;
+            border-left: 6px solid #4fd1c5;
+            padding-left: 15px;
+        }
+
+        /* Estilos para párrafos dentro de .texto */
+        .texto p {
+            text-align: justify;
+            line-height: 1.6;
+            margin-top: 10px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos para contenedores de imágenes */
+        .imagen {
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Estilos para imágenes dentro de .imagen */
+        .imagen img {
+            max-width: 380px;
+            width: 90%;
+            border-radius: 10px;
+            border: 2px solid #319795;
+            transition: transform 0.3s;
+        }
+
+        /* Estilos para imágenes dentro de .imagen al pasar el mouse */
+        .imagen img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos generales para tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos para encabezados y celdas de tablas */
+        table th, table td {
+            border: 1px solid #b2f5ea;
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* Estilos específicos para encabezados de tablas */
+        table th {
+            background-color: #319795;
+            color: white;
+            font-family: "Numans", sans-serif;
+            font-weight: bold;
+        }
+
+        /* Estilos para listas no ordenadas */
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        /* Estilos para elementos de lista */
+        li {
+            margin-bottom: 8px;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* Estilos para la sección de volver */
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        /* Estilos para enlaces dentro de .volver */
+        .volver a {
+            background-color: #319795;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-family: "Numans", sans-serif;
+            transition: 0.3s;
+            box-shadow: #000000;
+        }
+
+        /* Estilos para enlaces dentro de .volver al pasar el mouse */
+        .volver a:hover {
+            background-color: #4fd1c5;
+            transform: scale(1.05);
+        }
+
+        /* Estilos para elementos marquee */
+        marquee {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #b2f5ea;
+            color: #319795;
+            font-family: "Dancing Script", cursive;
+            font-size: 22px;
+            border-top: 2px solid #4fd1c5;
+            border-bottom: 2px solid #4fd1c5;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <br>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    <div class="contenedor">
+    <h1>👁️ Luz Visible y Percepción Humana</h1>
+    <br><br><br>
+        <div class="seccion">
+            <div class="texto">
+                <h2>El ojo humano como detector</h2>
+                <p>
+                    La <b>luz visible</b> es la parte del espectro electromagnético que el ojo humano puede percibir.
+                    Su rango va desde los <b>400 nm (violeta)</b> hasta los <b>700 nm (rojo)</b>. 
+                    Los receptores visuales llamados <i>conos</i> y <i>bastones</i> permiten detectar diferentes colores
+                    e intensidades, haciendo posible la visión.
+                </p>
+            </div>
+            <div class="imagen">
+                <img src="ojo.png">
+            </div>
+        </div>
+<br><br><br>
+        <div class="seccion">
+            <div class="texto">
+                <h2>Colores y longitudes de onda</h2>
+                <p>
+                    Cada color visible corresponde a una longitud de onda diferente:
+                </p>
+                <table>
+                    <tr><th>Color</th><th>Longitud de onda</th></tr>
+                    <tr><td>Violeta</td><td>400–450 nm</td></tr>
+                    <tr><td>Azul</td><td>450–495 nm</td></tr>
+                    <tr><td>Verde</td><td>495–570 nm</td></tr>
+                    <tr><td>Amarillo</td><td>570–590 nm</td></tr>
+                    <tr><td>Naranja</td><td>590–620 nm</td></tr>
+                    <tr><td>Rojo</td><td>620–700 nm</td></tr>
+                </table>
+            </div>
+            <div class="imagen">
+                <img src="colores.gif">
+            </div>
+        </div>
+<br><br><br>
+        <div class="seccion">
+            <div class="texto">
+                <h2>Fenómenos ópticos</h2>
+                <ul>
+                    <li><b>Reflexión:</b> la luz rebota en superficies pulidas.</li>
+                    <li><b>Refracción:</b> cambia de dirección al pasar entre medios.</li>
+                    <li><b>Dispersión:</b> separación de colores, como en un arcoíris.</li>
+                    <li><b>Interferencia:</b> combinación de ondas que generan patrones de luz y sombra.</li>
+                </ul>
+            </div>
+            <div class="imagen">
+                <img src="arcoiris.jpg">
+            </div>
+        </div>
+        <marquee behavior="alternate">
+            🌈 La luz visible nos permite ver los colores del mundo y disfrutar su belleza. 🌈
+        </marquee>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+<title>¿Qué son las ondas electromagnéticas?</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+
+<style>
+/* Dropdown principal */
+.dropdown {
+    position: relative; /* Posición relativa para el contenido absoluto */
+    display: inline-block; /* Mostrar en línea */
+    margin-top: 20px; /* Margen superior */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centrar contenido */
+    transition: padding-bottom 0.5s; /* Animación suave */
+}
+
+.dropdown:hover {
+    padding-bottom: 250px; /* Espacio extra al pasar el mouse */
+}
+
+/* Botón principal del dropdown */
+.droppp {
+    background-color: #4fd1c5; /* Fondo turquesa */
+    color: white; /* Color del texto */
+    padding: 14px 24px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    border-radius: 4px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: transform 0.3s; /* Animación de transformación */
+    font-family: "Roboto", sans-serif; /* Fuente */
+}
+
+.droppp:hover {
+    transform: scale(1.05); /* Agrandar al pasar mouse */
+}
+
+/* Contenido desplegable */
+.dropdownContent {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posición absoluta */
+    background-color: white; /* Fondo blanco */
+    width: auto; /* Ancho automático */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto;
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 12px; /* Espaciado interno */
+    text-align: center; /* Centrar contenido */
+}
+
+.dropdown:hover .dropdownContent {
+    display: block; /* Mostrar contenido al pasar mouse */
+}
+
+/* Botones dentro del dropdown */
+.temaDropdown {
+    display: inline-block; /* Mostrar en línea */
+    width: 180px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    padding: 8px 14px; /* Espaciado interno */
+    vertical-align: top; /* Alineación al top */
+    margin: 8px; /* Margen */
+    background-color: #4fd1c5; /* Fondo turquesa */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-family: "Josefin Sans", sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    font-size: 14px; /* Tamaño fuente */
+    transition: transform 0.5s; /* Animación suave */
+}
+
+.temaDropdown:hover {
+    background-color: #3aa89b; /* Cambiar fondo al pasar mouse */
+    transform: scale(1.1); /* Agrandar al pasar mouse */
+    color: white; /* Mantener color del texto */
+}
+
+/* Contenedor principal */
+.contenedorprincipal {
+    width: 95%; /* Ajuste para móvil */
+    max-width: 1200px; /* Máximo ancho para desktop */
+    margin: 30px auto; /* Centrado horizontal */
+    box-shadow:#000000; /* Sombra */
+    background-color: white; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Evitar desbordamiento */
+    border: 3px inset #b2f5ea; /* Borde decorativo */
+}
+
+/* Área del título h1 */
+.tituloh1area {
+    background-color: white; /* Fondo blanco */
+    padding-top: 20px; /* Espaciado superior */
+}
+
+/* Contenido de la página */
+.contenidopagina {
+    padding: 0 10px 40px 10px; /* Espaciado interno */
+    text-align: left; /* Justificado a la izquierda */
+    font-family: "Numans", sans-serif; /* Fuente principal */
+}
+
+/* Marquee decorativo */
+.marqueeturquesa {
+    background-color: #f0f9f8; /* Fondo claro */
+    color: #319795; /* Texto turquesa */
+    font-family: "Josefin Sans", sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    padding: 10px; /* Espaciado interno */
+    border-top: 2px solid #4fd1c5; /* Borde superior */
+    border-bottom: 2px solid #4fd1c5; /* Borde inferior */
+    margin: 30px 0; /* Separación vertical */
+    font-size: 20px; /* Tamaño fuente */
+}
+
+/* Pie de página */
+.piecontenido {
+    background-color: #319795; /* Fondo turquesa oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    font-family: "Roboto", sans-serif; /* Fuente */
+    border-radius: 0 0 12px 12px; /* Bordes redondeados solo abajo */
+}
+
+/* Estilo general del cuerpo */
+body {
+    background-color: white; /* Fondo blanco */
+    font-family: "Trirong", serif; /* Fuente principal */
+    font-size: 20px; /* Tamaño de fuente */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    color: #333; /* Color del texto */
+}
+
+/* Títulos h1 */
+h1 {
+    color: #319795; /* Color turquesa */
+    font-family: "Numans", sans-serif; /* Fuente */
+    text-align: center; /* Centrado */
+    font-size: 42px; /* Tamaño fuente */
+    padding: 10px 0; /* Espaciado vertical */
+    margin-bottom: 0; /* Sin margen inferior */
+    border: none; /* Sin borde */
+}
+
+/* Títulos h2 */
+h2 {
+    color: #319795; /* Color turquesa */
+    padding: 15px 10px; /* Espaciado interno */
+    font-family: "Dancing Script", cursive; /* Fuente cursiva */
+    margin-top: 30px; /* Margen superior */
+    font-size: 38px; /* Tamaño fuente */
+    text-align: left; /* Alineación a la izquierda */
+    border: none; /* Sin borde */
+}
+
+/* Párrafos */
+p {
+    line-height: 1.8; /* Altura de línea */
+    text-align: justify; /* Texto justificado */
+    font-family: "Roboto", sans-serif; /* Fuente */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Listas no ordenadas */
+ul {
+    padding-left: 35px; /* Espacio para viñetas */
+    list-style-type: none; /* Sin estilo por defecto */
+    line-height: 1.6; /* Altura de línea */
+    font-family: "Roboto", sans-serif; /* Fuente */
+}
+
+/* Elementos de lista */
+li {
+    list-style-type: none; /* Sin viñeta */
+}
+
+/* Divs tipo lista */
+.list {
+    display: block; /* Cada uno ocupa línea completa */
+    background-color: #4fd1c5; /* Fondo turquesa */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 8px 15px; /* Espaciado */
+    margin: 5px 0; /* Margen vertical */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño fuente */
+    cursor: default; /* No clicable */
+    border-radius: 4px; /* Bordes redondeados */
+    font-family: "Roboto", sans-serif; /* Fuente */
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s; /* Animación */
+}
+
+.list:hover {
+    background-color: #3aa89b; /* Cambio de color al pasar mouse */
+}
+
+/* Estilos de tablas */
+table {
+    border-collapse: collapse; /* Colapsar bordes */
+    margin: auto; /* Centrado horizontal */
+    box-shadow: #000000; /* Sombra */
+    font-family: "Roboto", sans-serif; /* Fuente */
+    width: 100%; /* Ancho completo */
+    border-radius: 8px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+}
+
+/* Celdas de tabla */
+td {
+    padding: 15px; /* Espaciado interno */
+    text-align: left; /* Alineación izquierda */
+    vertical-align: top; /* Alineación vertical superior */
+    display: block; /* Para adaptabilidad en móviles */
+    width: auto !important; /* Ancho automático */
+    margin-bottom: 15px; /* Separación inferior */
+    box-sizing: border-box; /* Incluir padding en ancho */
+    border: 1px solid #b2f5ea; /* Borde decorativo */
+}
+
+/* Celdas con fondo claro */
+.celdaFondoClaro {
+    background-color: #e6f7f7; /* Fondo turquesa claro */
+    vertical-align: top; /* Alineación superior */
+    border-radius: 35px; /* Bordes redondeados */
+}
+
+/* Celdas con fondo blanco */
+.celdaFondoBlanco {
+    background-color: white; /* Fondo blanco */
+    vertical-align: top; /* Alineación superior */
+    border-radius: 35px; /* Bordes redondeados */
+}
+
+/* Tabla resumen interna */
+table table tr { 
+    background-color: #b2f5ea; /* Fondo de fila encabezado */
+    color: #319795; /* Texto turquesa */
+    font-weight: bold; /* Negrita */
+    display: table-row; /* Mostrar como fila */
+}
+
+table table td {
+    display: table-cell; /* Celdas de tabla interna */
+    width: auto; /* Ancho automático */
+    margin-bottom: 0; /* Sin margen inferior */
+    background-color: white; /* Fondo blanco */
+    border: 1px solid #4fd1c5; /* Borde decorativo */
+}
+</style>
+</head>
+
+<body>
+
+<div class="dropdown">
+    <a href="#" class="droppp">Ver temas principales...</a>
+    
+    <div class="dropdownContent">
+        <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+        <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+        <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+        <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+        <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+        <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+        <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+        <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+        <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+        <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+        <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+        <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+        <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+    </div>
+</div>
+
+<div class="contenedorprincipal">
+
+    <div class="tituloh1area">
+        <h1>¿Qué son las Ondas Electromagnéticas?</h1>
+    </div>
+    
+    <div class="contenidopagina">
+
+        <table width="100%">
+        <tr>
+            
+            <td class="celdaFondoClaro">
+                <h2>Definición</h2>
+                <p>
+                Las <b>ondas electromagnéticas (OEM)</b> son perturbaciones que se propagan en el espacio
+                transportando energía sin necesidad de un medio material. A diferencia del sonido o las olas de agua, 
+                las OEM pueden viajar perfectamente en el <b>vacío</b>, lo que permite que la luz solar o las señales de radio
+                lleguen hasta nosotros desde el espacio.
+                </p>
+                <p>
+                Tienen una <b>naturaleza dual</b>: se comportan como ondas (con longitud de onda y frecuencia) 
+                y como partículas llamadas <b>fotones</b> (que transportan la energía).
+                </p>
+                
+                <h2>Velocidad de Propagación</h2>
+                <p>
+                Todas las OEM, sin importar si son ondas de radio o rayos gamma, viajan a la misma velocidad en el vacío, conocida como la <b>velocidad de la luz</b>. Este valor es la velocidad máxima posible en el Universo.
+                </p>
+                
+                <h2>Importancia Diaria</h2>
+                <p>
+                Las OEM son fundamentales para nuestra vida moderna. La luz del sol que vemos, la señal Wi-Fi que nos conecta a Internet, la radiación que calienta los alimentos en el microondas y la señal de GPS para navegar son todas formas de ondas electromagnéticas.
+                </p>
+            </td>
+
+            <td class="celdaFondoBlanco">
+                <h2>Componentes</h2>
+                <p>Una onda electromagnética está formada por dos campos que oscilan y se refuerzan mutuamente:</p>
+                <br>
+                <div class="list">Campo eléctrico oscilante.</div>
+                <br>
+                <div class="list">Campo magnético oscilante, perpendicular al eléctrico.</div>
+                <br>
+                <div class="list">Ambos perpendiculares a la dirección de propagación.</div>
+                
+                <center>
+                <img src="ondas.jpg.jpg" width="220" style="max-width: 100%; height: auto;" alt="Ejemplo de ondas electromagnéticas">
+                </center>
+            </td>
+
+            <td class="celdaFondoClaro">
+                <h2>Origen</h2>
+                <p>
+                Las ondas electromagnéticas se generan por <b>cargas eléctricas aceleradas</b>, 
+                como las que ocurren en antenas, donde los electrones se mueven rápidamente, o en fenómenos naturales como la luz que emite un átomo excitado.
+                </p>
+                
+                <h2>El Espectro Electromagnético</h2>
+                <p>
+                El conjunto de todas las OEM se llama el <b>Espectro Electromagnético</b>. Se organiza por el nivel de energía: va desde ondas de radio (baja energía, usadas en comunicación) hasta rayos gamma (alta energía, usados en medicina). ¡La luz que ven nuestros ojos es solo una pequeña porción de todo este espectro!
+                </p>
+                
+                <h2>Resumen de Propiedades</h2>
+                <table border="1">
+                <tr> 
+                    <td><b>Característica</b></td>
+                    <td><b>Descripción</b></td>
+                </tr>
+                <tr>
+                    <td>Naturaleza</td>
+                    <td>Onda y partícula (fotón).</td>
+                </tr>
+                <tr>
+                    <td>Velocidad</td>
+                    <td>La misma que la luz.</td>
+                </tr>
+                <tr>
+                    <td>Medio de propagación</td>
+                    <td>No necesita medio (viaja en el vacío).</td>
+                </tr>
+                <tr>
+                    <td>Componentes</td>
+                    <td>Campo eléctrico y magnético (perpendiculares).</td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+
+        <br>
+        <marquee behavior="alternate" class="marqueeturquesa">
+        ¡Las ondas electromagnéticas están en todas partes! Son la base de las comunicaciones, la luz y el calor.
+        </marquee>
+        
+    </div>
+    
+    <div class="piecontenido">
+        Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+    </div>
+</div>
+
+</body>
+</html>

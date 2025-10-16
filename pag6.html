@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>🔥 Infrarrojo y Radiación Térmica</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; 
+        }
+        
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute; 
+            background-color: #e6f7f5;
+            width: auto; 
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center; 
+        }
+        
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px; 
+            height: 40px; 
+            padding: 8px 14px; 
+            vertical-align: top;
+            margin: 8px; 
+            background-color: #4fd1c5; 
+            color: white;
+            text-align: center; 
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif; 
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white; 
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+        
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            color: #333;
+        }
+
+        /* Estilos para el contenedor principal */
+        .contenedorPrincipal {
+            width: 90%;
+            max-width: 1190px;
+            margin: 30px auto;
+            box-shadow: none;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        /* Estilos adicionales para el contenido principal de la página */
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+            min-height: 400px;
+        }
+
+        /* Estilos para los encabezados h1 dentro de .contenidopagina */
+        .contenidopagina h1 {
+            color: #319795;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 42px;
+            padding: 10px 0;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #4fd1c5;
+        }
+
+        /* Estilos para los encabezados h2 dentro de .contenidopagina */
+        .contenidopagina h2 {
+            color: #319795;
+            padding: 15px 0px 10px 0px;
+            font-family: "Dancing Script", cursive;
+            margin-top: 50px;
+            font-size: 38px;
+            text-align: left;
+        }
+
+        /* Estilos para los encabezados h3 dentro de .contenidopagina */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 30px;
+            padding: 5px 15px;
+            background-color: #e6f7f5;
+            border-left: 5px solid #319795;
+        }
+        
+        /* Estilos para párrafos y listas dentro de .contenidopagina */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.8;
+            text-align: justify;
+            font-family: "Roboto", sans-serif;
+            margin-left: 20px;
+        }
+        
+        /* Estilos para elementos de fórmula */
+        .formula {
+            font-family: Consolas, monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Estilos para el contenedor del dropdown (duplicado, posiblemente redundante) */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s; 
+        }
+        
+        /* Estilos para tablas dentro de .contenidopagina */
+        .contenidopagina table {
+            border-collapse: collapse;
+            margin: 40px auto;
+            box-shadow: #000000;
+            font-family: "Roboto", sans-serif;
+            width: 90%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* Estilos para las celdas de tablas dentro de .contenidopagina */
+        .contenidopagina table td {
+            padding: 15px;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        /* Estilos para las celdas de la cabecera principal de la tabla */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        
+        /* Estilos para las filas de tablas dentro de .contenidopagina al pasar el mouse */
+        .contenidopagina table tr:hover {
+            background-color: #b2f5ea;
+        }
+
+        /* Estilos para el pie de contenido */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            border-radius: 0px 0px 12px 12px;
+            margin-top: 30px;
+        }
+        
+        /* Estilos para datos curiosos */
+        .datoCurioso {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f9f8;
+            border: 2px solid #4fd1c5;
+            border-radius: 10px;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para el contenedor de enlaces de video */
+        .videoLinkContainer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        /* Estilos para el texto de enlaces de video */
+        .videoLinkText {
+            display: inline-block;
+            margin: 0px auto 15px auto;
+            padding: 15px 30px;
+            background-color: #ffffff;
+            border: 3px solid #319795;
+            border-radius: 8px;
+            box-shadow: #000000;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #319795;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        /* Estilos para el texto de enlaces de video al pasar el mouse */
+        .videoLinkText:hover {
+            transform: scale(1.03);
+            background-color: #e6f7f5;
+        }
+
+        /* Estilos generales para imágenes */
+        img {
+            width: 280px;
+            height: 250px;
+            border-radius: 90px;
+            margin-top: 15px;
+            transition: transform 0.3s;
+        }
+
+        /* Estilos para imágenes al pasar el mouse */
+        img:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        <br>
+        <div class="dropdownContent">
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    <div class="contenedor">
+    <div class="contenedorPrincipal">
+            <div class="contenidopagina">
+            <h1 align="center">🔥 Infrarrojo y Radiación Térmica</h1>
+            
+            <p>La radiación infrarroja (IR) es una forma de onda electromagnética que se encuentra justo debajo del extremo de la luz visible roja en el espectro. Es, fundamentalmente, la forma en que la energía térmica (calor) se transfiere a través del espacio, incluso en el vacío.</p>
+
+            <h2>1. Características del Infrarrojo (IR)</h2>
+            <p>El infrarrojo se divide generalmente en tres categorías, las cuales varían según su longitud de onda y cómo interactúan con la materia:</p>
+            <ul>
+                <li><b>Infrarrojo Cercano (NIR)</b>: Está más próximo a la luz visible. Se utiliza comúnmente en fibras ópticas, mandos a distancia y algunos sistemas de visión nocturna no térmica.</li>
+                <li><b>Infrarrojo Medio (MIR)</b>: Es altamente absorbido por muchos materiales, lo que lo hace útil en el análisis químico y la detección de gases específicos.</li>
+                <li><b>Infrarrojo Lejano (FIR) o Térmico</b>: Esta es la región donde se encuentra la mayor parte de la radiación térmica que emiten los objetos a temperatura ambiente y corporal. Cuanto más caliente está un objeto, más energía IR emite.</li>
+            </ul>
+
+            <h2>2. La Radiación Térmica: Principios Físicos</h2>
+            <p>La radiación térmica es la emisión de energía electromagnética de todos los objetos debido a la vibración de sus átomos y moléculas, siempre que su temperatura sea superior al cero absoluto.</p>
+            
+            <h3>Leyes que Gobiernan la Emisión de Calor</h3>
+            <ul>
+                <li><b>Ley de Stefan-Boltzmann</b>: Establece que la potencia total radiada por unidad de área de un cuerpo negro es proporcional a la cuarta potencia de su temperatura termodinámica. Esto se resume en la fórmula: <b><i>P ∝<sup>4</sup></i></b> .Esto explica el rápido aumento de energía radiada con pequeños incrementos de temperatura.</li>
+                <li><b>Ley de Wien</b>: Determina la longitud de onda en la que un objeto caliente emite su máxima radiación. A medida que la temperatura aumenta, el pico de emisión se desplaza hacia longitudes de onda más cortas (por eso un objeto pasa de emitir IR a brillar con luz visible roja o azul).</li>
+            </ul>
+            
+            <hr size="1" width="100%" color="#4fd1c5">
+
+            
+            <h2>3. Aplicaciones Tecnológicas Clave</h2>
+            <p><b>Las propiedades únicas de la radiación infrarroja le otorgan una amplia gama de usos en la tecnología y la industria</b>:</p>
+
+            <table border="1" cellpadding="10" cellspacing="0" width="100%" align="center">
+                <tr class="cabeceraprincipal">
+                    <td><b>Aplicación</b></td>
+                    <td><b>Descripción</b></td>
+                    <td><b>Rango de Infrarrojo utilizado</b></td>
+                </tr>
+                <tr>
+                    <td><b>Termografía</b></td>
+                    <td>Uso de cámaras especiales para crear imágenes basadas en las diferencias de temperatura (mapas de calor), detectando fugas de energía o fallas en maquinaria.</td>
+                    <td>Infrarrojo Lejano (Térmico)</td>
+                </tr>
+                <tr>
+                    <td><b>Calefacción Radiante</b></td>
+                    <td>Estufas y calentadores que transmiten calor directamente a las personas y objetos a través de la absorción de ondas IR, sin necesidad de calentar el aire.</td>
+                    <td>Infrarrojo Lejano</td>
+                </tr>
+                <tr>
+                    <td><b>Astronomía IR</b></td>
+                    <td>Observación de objetos fríos o regiones oscuras del espacio (como nubes de gas y polvo) que son invisibles a la luz óptica.</td>
+                    <td>Infrarrojo Medio e Infrarrojo Lejano</td>
+                </tr>
+                <tr>
+                    <td><b>Control Remoto</b></td>
+                    <td>Dispositivos que utilizan pulsos de radiación IR para la comunicación de corto alcance y sin cables.</td>
+                    <td>Infrarrojo Cercano</td>
+                </tr>
+            </table>
+            
+            <div class="datoCurioso">
+                💡 <b>Dato Curioso:</b> ¿Sabías que la luz infrarroja es como un "interruptor" para las <b>mitocondrias</b>? Al ser absorbida por estas "centrales de energía" de tus células, las mitocondrias aceleran la producción de <b>ATP</b> (la energía celular). Este impulso no genera calor, pero sí acelera la <b>reparación</b> de los tejidos y <b>reduce la inflamación</b>. <br>¡Es una bio-recarga a nivel microscópico! ⚡
+            </div>
+        </div>
+        <div class="videoLinkContainer">
+            <div class="videoLinkText">
+                Click en la imagen para ver video sobre el efecto en las mitocondrias
+                <br><br>
+                ⬇️
+            </div>
+            <br><br>
+            <a href="https://youtube.com/shorts/2hviVLy3UHI?si=MnRM44F9aQCO_Ats"><img src="micro.jpg"></a>
+        </div>
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</div>
+</body>
+</html>

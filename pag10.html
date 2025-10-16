@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+    <title>☢️ Rayos Gamma</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            color: #333333;
+        }
+        
+        /* Estilos para el contenedor principal */
+        .contenedor-principal {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+            min-height: 400px;
+        }
+
+        /* Estilos para h1 dentro de .contenidopagina */
+        .contenidopagina h1 {
+            color: #319795;
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 37px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #4fd1c5;
+        }
+
+        /* Estilos para h2 dentro de .contenidopagina */
+        .contenidopagina h2 {
+            color: #319795;
+            padding-bottom: 10px;
+            font-family: "Dancing Script", cursive;
+            margin-top: 35px;
+            font-size: 35px;
+        }
+
+        /* Estilos para h3 dentro de .contenidopagina */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 25px;
+        }
+        
+        /* Estilos para p y li dentro de .contenidopagina */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.7;
+            text-align: justify;
+            color: #333333;
+        }        
+
+        /* Estilos para tablas dentro de .contenidopagina */
+        .contenidopagina table {
+            border-collapse: collapse;
+            margin: 30px auto;
+            font-family: "Roboto", sans-serif;
+            width: 80%;
+        }
+
+        /* Estilos para filas de tablas en .contenidopagina al pasar el mouse */
+        .contenidopagina table tr:hover {
+            background-color: #e6f7f5;
+        }
+
+        /* Estilos para td dentro de tablas en .contenidopagina */
+        .contenidopagina table td {
+            padding: 10px;
+            border: 1px solid #dddddd;
+        }
+        
+        /* Estilos para td en la cabecera clara de tablas */
+        .cabeceraclara td { 
+            background-color: #b2f5ea; 
+            color: #333333; 
+            font-weight: bold;
+        }
+
+        /* Estilos para td en la cabecera principal de tablas */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5; 
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s;
+        }
+        
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+            background-color: #4fd1c5;
+            color: #ffffff;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+            transform: scale(1.05);
+            background-color: #3aa89b;
+        }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            padding: 8px 14px;
+            vertical-align: top;
+            margin: 8px;
+            background-color: #4fd1c5;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        /* Estilos para el pie de contenido */
+        .pieContenido {
+            background-color: #319795;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        /* Estilos generales para imágenes */
+        img {
+            width: 30%;
+            display: block;
+            margin: 15px auto;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="dropdown">
+            <a href="#" class="droppp">Ver temas principales...</a>
+            
+            <div class="dropdownContent">
+                <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+                <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+                <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+                <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+                <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+                <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+                <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+                <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+                <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV)</a>
+                <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+                <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+                <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+                <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+            </div>
+        </div>
+
+        <div class="contenidopagina">
+            <h1>☢️ Rayos Gamma</h1>
+
+            <h2>1. ¿Qué son los Rayos Gamma?</h2>
+            <p>Los <b>rayos gamma</b> son ondas electromagnéticas de <b>muy alta energía</b> y <b>longitud de onda extremadamente corta</b>. Se producen principalmente en procesos nucleares y cósmicos, y son invisibles al ojo humano.</p>
+            <img src="rayos_gamma_1.jpg" alt="Espectro de rayos gamma">
+
+            <h3>Origen de los Rayos Gamma</h3>
+            <ul>
+                <li><b>Desintegración nuclear:</b> Los núcleos atómicos inestables liberan rayos gamma al alcanzar un estado más estable.</li>
+                <li><b>Explosiones cósmicas:</b> Supernovas, estrellas de neutrones y colisiones de agujeros negros generan rayos gamma de gran energía.</li>
+                <li><b>Procesos artificiales:</b> Reactores nucleares y aceleradores de partículas pueden generar rayos gamma controlados.</li>
+            </ul>
+
+            <h2>2. Propiedades de los Rayos Gamma</h2>
+            <p>Son altamente penetrantes y pueden atravesar materiales densos, por lo que requieren blindajes especiales (plomo, hormigón) para proteger a seres humanos.</p>
+            <table border="1" cellpadding="10" cellspacing="0" width="80%" align="center">
+                <tr class="cabeceraprincipal">
+                    <td>Propiedad</td>
+                    <td>Descripción</td>
+                </tr>
+                <tr class="cabeceraclara">
+                    <td>Longitud de onda</td>
+                    <td>Menor a 0.01 nanómetros</td>
+                </tr>
+                <tr>
+                    <td>Energía</td>
+                    <td>De 100 keV a varios MeV</td>
+                </tr>
+                <tr class="cabeceraclara">
+                    <td>Velocidad</td>
+                    <td>La velocidad de la luz (c)</td>
+                </tr>
+                <tr>
+                    <td>Poder de penetración</td>
+                    <td>Alto, capaz de atravesar metales y concreto delgado</td>
+                </tr>
+            </table>
+
+            <h2>3. Aplicaciones</h2>
+            <ul>
+                <li><b>Medicina:</b> Radioterapia para tratar cáncer y destruir células tumorales.</li>
+                <li><b>Industria:</b> Inspección de soldaduras, detección de fallas en materiales y esterilización de equipos.</li>
+                <li><b>Ciencia:</b> Observación de fenómenos astronómicos y experimentos de física de partículas.</li>
+            </ul>
+
+            <h2>4. Precauciones y Riesgos</h2>
+            <p>La exposición directa a rayos gamma puede causar daños graves a la salud, incluyendo radiación interna y daño celular. Es esencial el uso de blindajes adecuados y protocolos de seguridad estrictos.</p>
+
+            <img src="rayos_gamma_2.jpg" alt="Protección contra rayos gamma">
+        </div>
+
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>

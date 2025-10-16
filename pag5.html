@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Ondas de radio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos para el contenedor del dropdown */
+        .dropdown {
+                position: relative;
+                display: inline-block;
+                margin-top: 20px;
+                width: 100%; 
+                text-align: center;
+                transition: padding-bottom 0.5s; 
+            }
+            
+        /* Estilos para el dropdown al pasar el mouse */
+        .dropdown:hover {
+                padding-bottom: 250px; 
+            }
+
+        /* Estilos para el enlace principal del dropdown */
+        .droppp {
+                background-color: #4fd1c5;
+                color: white;
+                padding: 14px 24px;
+                font-size: 18px;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 4px;
+                font-weight: bold;
+                transition: transform 0.3s;
+                font-family: "Roboto", sans-serif;
+            }
+            
+        /* Estilos para el enlace principal del dropdown al pasar el mouse */
+        .droppp:hover {
+                transform: scale(1.05);
+            }
+
+        /* Estilos para el contenido del dropdown */
+        .dropdownContent {
+                display: none;
+                position: absolute; 
+                background-color: #F8F9FA; 
+                width: auto; 
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 4px;
+                padding: 12px;
+                text-align: center; 
+            }
+            
+        /* Estilos para mostrar el contenido del dropdown al pasar el mouse */
+        .dropdown:hover .dropdownContent {
+                display: block;
+            }
+
+        /* Estilos para los enlaces de temas en el dropdown */
+        .temaDropdown {
+                display: inline-block;
+                width: 180px; 
+                height: 40px; 
+                padding: 8px 14px; 
+                vertical-align: top;
+                margin: 8px; 
+                background-color: #4fd1c5; 
+                color: white;
+                text-align: center; 
+                text-decoration: none;
+                border-radius: 8px;
+                font-family: "Josefin Sans", sans-serif; 
+                font-weight: bold;
+                font-size: 14px;
+                transition: transform 0.5s;
+            }
+            
+        /* Estilos para los enlaces de temas en el dropdown al pasar el mouse */
+        .temaDropdown:hover {
+                background-color: #3aa89b;
+                transform: scale(1.1);
+                color: white; 
+            }
+        
+        /* Estilos generales para el cuerpo de la página */
+        body {
+            background: #F8F9FA; 
+            color: #319795; 
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Estilos para el contenedor principal de la página */
+        .contenedor-principal {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow:#000000;
+            overflow: hidden;
+        }
+
+        /* Estilos para el contenido principal de la página */
+        .contenidopagina {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Estilos para los encabezados h1 */
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 45px;
+            color: #319795; 
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 700;
+            border-bottom: 2px solid #e0f5f3;
+            padding-bottom: 10px;
+        }
+
+        /* Estilos específicos para h1 dentro de .contenidopagina */
+        .contenidopagina h1 {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 30px;
+            color: #319795; 
+            margin-top: 40px;
+            font-weight: 700;
+            border-bottom: none;
+        }
+
+        /* Estilos para los párrafos */
+        p {
+            text-align: justify;
+            color: #349D8B;
+            line-height: 1.7;
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        /* Estilos para los contenedores de contenido */
+        .contenedor {
+            margin: 25px auto; 
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #effcfb;
+            font-size: 18px;
+            text-align: justify; 
+            border: 1px solid #e6f7f5; 
+            border-left: 5px solid #4fd1c5;
+            box-shadow: #000000;
+            color: #349D8B;
+        }
+
+        /* Estilos para los contenedores de contenido al pasar el mouse */
+        .contenedor:hover {
+            border-left: 5px solid #3aa89b;
+            background-color: #e6f7f5;
+            box-shadow: #000000;
+        }
+
+        /* Estilos para el subtítulo final */
+        .subtituloFinal {
+            font-size: 37px;
+            font-family: 'Dancing Script', cursive;
+            color: #319795; 
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        /* Estilos para la sección de enlaces finales */
+        .enlacesfinales {
+            text-align: center;
+            padding: 20px 0px 30px 0px;
+        }
+
+        /* Estilos para los enlaces dentro de .enlacesfinales */
+        .enlacesfinales a {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin: 0px 15px;
+            font-size: 18px;
+            font-weight: 700px;
+            text-decoration: none; 
+            display: inline-block;
+        }
+        
+        /* Estilos para los enlaces dentro de .enlacesfinales al pasar el mouse */
+        .enlacesfinales a:hover {
+            background-color: #3aa89b;
+        }
+
+        /* Estilos para el enlace de ir arriba */
+        .enlaceArriba {
+            display: block;
+            text-align: right;
+            margin-top: 40px;
+            font-size: 16px;
+            color: #319795;
+            text-decoration: none;
+        }
+
+        /* Estilos para el enlace de ir arriba al pasar el mouse */
+        .enlaceArriba:hover {
+            color: #4fd1c5;
+        }
+
+        /* Estilos para el pie de página */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<body>
+    <div class="dropdown">
+        <a href="#" class="droppp">Ver temas principales...</a>
+        
+        <div class="dropdownContent">
+            
+            <a href="index.html" class="temaDropdown">🏠 Ir a página principal</a>
+            <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+            <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+            <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+            <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+            <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+            <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+            <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+            <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+            <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+            <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+            <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+            <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+        </div>
+    </div>
+    
+    <div class="contenedorPrincipal">
+        <div class="contenidopagina">
+    <div class="contenedor-principal">
+
+        <div class="contenidopagina">
+            <h1>Ondas de radio y microondas</h1>
+            
+            <h1>¿Qué son las ondas de radio?</h1>
+            <p class="contenedor">Son un tipo de <b>radiación electromagnética</b> con las longitudes de onda más largas del espectro electromagnético. Se caracterizan por campos eléctricos y magnéticos que oscilan y viajan a la velocidad de la luz. Su uso es fundamental en tecnologías como la radio, la televisión, los teléfonos móviles, Internet y los sistemas de navegación, gracias a su capacidad de transmitir información a través del espacio.</p>
+            <img src="mas.gif" height="125px" width="225px">
+            <h1>¿Cómo funcionan?</h1>
+            <p class="contenedor">Las ondas de radio funcionan convirtiendo el sonido o la información en una señal eléctrica, la cual es transmitida por una antena como ondas electromagnéticas. Estas ondas viajan por el espacio y son captadas por otra antena que las convierte de nuevo en señales eléctricas, decodificando la información original. Para evitar interferencias, se usan frecuencias diferentes y las técnicas de <b>AM (Amplitud Modulada)</b> o <b>FM (Frecuencia Modulada)</b>.</p>
+            <img src="am.gif" height="125px" width="225px">
+            
+            <h1>Tipo de uso y aplicaciones</h1>
+            <p class="contenedor">Las ondas de radio, un tipo de onda electromagnética, se usan principalmente en <b>comunicaciones inalámbricas</b> (radio, televisión, telefonía móvil y Wi-Fi). Otras aplicaciones esenciales incluyen sistemas de navegación (<b>GPS</b>), la resonancia magnética (<b>IRM</b>) para imágenes médicas y la radioastronomía, que utiliza estas ondas para estudiar el universo.</p>
+            <img src="gps.gif" height="125px" width="225px">
+            
+            <div class="subtituloFinal">Aquí unos ejemplos de usos en comunicaciones, aplicaciones tecnológicas y otras aplicaciones:</div>
+            <div class="enlacesfinales">
+                <a href="https://blogs.upm.es/museotelecomunicaciones/avances-y-usos-de-la-radio/">Comunicaciones</a>
+                <a href="https://flypix.ai/es/blog/radar-systems-how-do-they-work-and-what-are-their-applications/">Detección y Medición</a>
+                <a href="https://www.scribd.com/document/833721164/Ondas-Mecanicas-en-La-Medicina">Medicina</a>
+            </div>
+
+            <a href="pag5.html" class="enlaceArriba">Ir Arriba</a>
+        </div>
+
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📡 Generaci&oacute;n y Detecci&oacute;n</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Dancing Script|Josefin Sans|Petit Formal Script|Roboto|Numans|Trirong">
+    <style>
+        /* estilo general del body */
+        body {
+            font-family: "Trirong", serif;
+            background-color: #e6f7f5;
+            margin: 0;
+            padding: 0;
+            color: #333; 
+        }
+        
+        /* contenedor principal */
+        .contenedor-principal {
+            width: 90%;
+            max-width: auto;
+            margin: 20px auto;
+            box-shadow: #000000;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* contenido de la página */
+        .contenidopagina {
+            padding: 40px 60px;
+            text-align: left;
+            font-family: "Numans", sans-serif;
+        }        
+
+        /* título principal */
+        .contenidopagina h1 {
+            color: #319795; 
+            font-family: "Numans", sans-serif;
+            text-align: center;
+            font-size: 37px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* subtítulos secciones */
+        .contenidopagina h2 {
+            color: #319795;
+            padding-bottom: 10px;
+            font-family: "Dancing Script", cursive;
+            margin-top: 35px;
+            font-size: 35px;
+        }
+
+        /* subsubtítulos */
+        .contenidopagina h3 {
+            color: #4fd1c5;
+            font-family: "Josefin Sans", sans-serif;
+            margin-top: 25px;
+        }
+        
+        /* párrafos y listas */
+        .contenidopagina p, .contenidopagina li {
+            line-height: 1.7;
+            text-align: justify;
+        }        
+
+        /* tablas de contenido */
+        .contenidopagina table {
+            border-collapse: collapse;
+            margin: 30px auto;
+            box-shadow: #000000;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* filas de la tabla */
+        .contenidopagina table tr {
+            background-color: #f7f7f7;
+        }
+        
+        .contenidopagina table tr:hover {
+            background-color: #e6f7f5;
+        }
+
+        /* celdas de la tabla */
+        .contenidopagina table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        /* estilo de encabezado claro */
+        .cabeceraclara td { 
+            background-color: #b2f5ea; 
+            color: #333; 
+            font-weight: bold;
+        }
+
+        /* estilo de encabezado principal */
+        .cabeceraprincipal td {
+            background-color: #4fd1c5; 
+            color: white;
+            font-weight: bold;
+        }
+
+        /* menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%; 
+            text-align: center;
+            transition: padding-bottom 0.5s;
+        }
+        
+        .dropdown:hover {
+            padding-bottom: 250px; 
+        }
+
+        .droppp {
+            background-color: #4fd1c5;
+            color: white;
+            padding: 14px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+            box-shadow: #000000;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .droppp:hover {
+            transform: scale(1.05);
+            background-color: #3aa89b;
+        }
+
+        /* contenido del dropdown */
+        .dropdownContent {
+            display: none;
+            position: absolute;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 4px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .dropdown:hover .dropdownContent {
+            display: block;
+        }
+
+        /* estilo de cada tema del dropdown */
+        .temaDropdown {
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            padding: 8px 14px;
+            vertical-align: top;
+            margin: 8px;
+            background-color: #4fd1c5;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            transition: transform 0.5s;
+        }
+        
+        .temaDropdown:hover {
+            background-color: #3aa89b;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* pie de página */
+        .pieContenido {
+            background-color: #319795;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+        }
+
+        /* estilos de imágenes */
+        img.gif1 {
+            width: 260px;
+            height: 256px;
+        }
+        img.gif2 {
+            width: 200px;
+            height: 156px;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="dropdown">
+            <a href="#" class="droppp">Ver temas principales...</a>
+            <div class="dropdownContent">
+                <a href="pag1.html" class="temaDropdown">🌊 ¿Qué son las ondas electromagnéticas?</a>
+                <a href="pag2.html" class="temaDropdown">🌈 El espectro electromagnético</a>
+                <a href="pag3.html" class="temaDropdown">⚙️ Propiedades fundamentales</a>
+                <a href="pag4.html" class="temaDropdown">📡 Generación y detección</a>
+                <a href="pag5.html" class="temaDropdown">📻 Ondas de radio y microondas</a>
+                <a href="pag6.html" class="temaDropdown">🔥 Infrarrojo y radiación térmica</a>
+                <a href="pag7.html" class="temaDropdown">👁️ Luz visible y percepción humana</a>
+                <a href="pag8.html" class="temaDropdown">☀️ Ultravioleta (UV): beneficios y riesgos</a>
+                <a href="pag9.html" class="temaDropdown">🩻 Rayos X</a>
+                <a href="pag10.html" class="temaDropdown">☢️ Rayos gamma</a>
+                <a href="pag11.html" class="temaDropdown">⚛️ Interacción con la materia</a>
+                <a href="pag12.html" class="temaDropdown">🔮 Aplicaciones innovadoras y futuro</a>
+            </div>
+        </div>
+        
+        <div class="contenidopagina">
+            <h1 align="center">📡 Generación y Detección de Ondas Electromagnéticas</h1>
+            <hr size=2 width="100%" color=" #319795"> 
+            
+            <h2>1. El Principio de la Generación</h2>
+            <p>La creación de una Onda Electromagnética (OEM) se basa en la <b>aceleración de cargas eléctricas</b>.</p>
+            
+            <h3>¿Cómo se Crean?</h3>
+            <ul>
+                <li><b>Cargas Aceleradas:</b> Una carga eléctrica que cambia su velocidad o dirección crea campos eléctricos y magnéticos que se propagan.</li>
+                <li><b>La Dualidad:</b> El campo eléctrico variable produce un campo magnético variable, y viceversa. Esta interdependencia permite que la perturbación se propague a la velocidad de la luz (c).</li>
+            </ul>
+            
+            <h3>Mecanismos Comunes de Generación</h3>
+            <table border="1" cellpadding="10" width="100%" align="center">
+                <tr class="cabeceraclara">
+                    <td><b>Mecanismo</b></td>
+                    <td><b>Descripción</b></td>
+                    <td><b>Ejemplos de OEM Generada</b></td>
+                </tr>
+                <tr>
+                    <td><b>Circuitos Oscilantes</b></td>
+                    <td>Electrones oscilando rápidamente en una antena (Circuitos LC)</td>
+                    <td>Ondas de Radio y Microondas</td>
+                </tr>
+                <tr>
+                    <td><b>Transiciones Electrónicas</b></td>
+                    <td>Electrones en los átomos cambian de un nivel de energía a otro (saltos cuánticos)</td>
+                    <td>Luz Visible, Ultravioleta (UV), Rayos X</td>
+                </tr>
+                <tr>
+                    <td><b>Radiación de Cuerpo Negro</b></td>
+                    <td>Vibración térmica de los átomos y moléculas debido a su temperatura</td>
+                    <td>Radiación Infrarroja y Térmica</td>
+                </tr>
+                <tr>
+                    <td><b>Desintegración Nuclear</b></td>
+                    <td>Cambios en el núcleo atómico liberando alta energía</td>
+                    <td>Rayos Gamma</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pieContenido">
+            Proyecto 1 TDS "B" 2025, Ondas Electromagnéticas.
+        </div>
+    </div>
+</body>
+</html>
